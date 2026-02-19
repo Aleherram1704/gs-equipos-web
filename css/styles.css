@@ -188,12 +188,25 @@ body {
   width: 100%;
 }
 
-.nav .active {
+/* ===== ACTIVE LINK SEGÚN LA PÁGINA ===== */
+
+/* HOME */
+.page-home .nav a[href="index.html"] {
   color: var(--blue);
   font-weight: 600;
 }
 
-.nav .active::after {
+.page-home .nav a[href="index.html"]::after {
+  width: 100%;
+}
+
+/* TIENDA */
+.page-shop .nav a[href="tienda.html"] {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.page-shop .nav a[href="tienda.html"]::after {
   width: 100%;
 }
 
