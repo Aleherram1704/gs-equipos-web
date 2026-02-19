@@ -1,0 +1,653 @@
+:root {
+  --blue: #1f3fae;
+  --red: #e30613;
+  --bg: white;
+  --text: #1a1a1a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ================= TOP BAR ================= */
+.top-bar {
+  background: var(--blue);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 24px;
+  font-size: 13px;
+}
+
+.top-links {
+  display: flex;
+  gap: 16px;
+}
+
+.top-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.top-links a:hover {
+  color: #ffd400;
+  opacity: 1;
+}
+
+
+.top-message {
+  opacity: 0.9;
+}
+
+/* ================= HEADER ================= */
+.header {
+  background: white;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 32px;
+  padding: 16px 24px;
+}
+
+.logo img {
+  height: 48px;
+  display: block;
+}
+
+.search {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* HEADER ICONS */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+/* CUENTA */
+.account {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+.account svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ICONOS */
+.icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: #333;
+  transition: stroke 0.2s ease;
+}
+
+.icon:hover svg,
+.account:hover svg {
+  stroke: var(--blue);
+}
+
+/* CONTEO */
+.badge-icon .badge-count {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  min-width: 18px;
+  height: 18px;
+  background: var(--blue);
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.badge-count[data-count="0"] {
+  display: none;
+}
+
+/* TOTAL CARRITO */
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.total {
+  font-size: 13px;
+  color: #333;
+}
+
+/* ================= BOTONES INICIO  ================= */
+.nav {
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 10px 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.nav a {
+  position: relative;
+  cursor: pointer;
+  padding: 6px 0;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--blue);
+  transition: width 0.25s ease;
+}
+
+.nav a:hover {
+  color: var(--blue);
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.nav .active {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.nav .active::after {
+  width: 100%;
+}
+
+.btn-offers {
+  margin-left: auto;
+  background: var(--red);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* ================= MAIN PUSH ================= */
+main {
+  flex: 1;
+}
+
+/* ================= LAYOUT ================= */
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+  padding: 24px;
+  background: transparent; /* dejamos respirar */
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  background: #f0f2f5; /* gris suave */
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: transform 0.15s ease, color 0.15s ease;
+  transform-origin: left center;
+}
+
+.sidebar li:hover {
+  transform: scale(1.05);
+  color: var(--blue);
+}
+
+.help-box {
+  background: var(--red);
+  color: white;
+  padding: 16px;
+  border-radius: 12px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.help-box button {
+  background: white;
+  color: var(--red);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* ================= BUTTONS ================= */
+.btn-primary {
+  background: var(--red);
+  color: white;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ================= SLIDER ================= */
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.slide {
+  position: relative;
+  min-width: 100%;
+  height: 420px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.slide-overlay {
+  position: absolute;
+  top: 50%;
+  left: clamp(220px, 35%, 400px);
+  transform: translateY(-50%);
+  max-width: min(460px, 90%);
+  color: #000;
+}
+
+
+.slide-overlay h1 {
+  font-size: 42px;
+  margin: 12px 0;
+}
+
+.slide-overlay p {
+  font-size: 18px;
+  color: #333;
+}
+
+.badge {
+  display: inline-block;
+  background: var(--blue);
+  color: white;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+/* FLECHAS */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-200%);
+  background: rgba(255,255,255,0.9);
+  border: none;
+  font-size: 28px;
+  padding: 6px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-btn.prev { left: 20px; }
+.slider-btn.next { right: 20px; }
+
+/* DOTS */
+.slider-dots {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.slider-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+.slider-dot.active {
+  background: var(--blue);
+}
+
+/* /* ================= FOOTER ================= */
+/* .footer {
+/*   background: #111;
+/*   color: white;
+/*   display: flex;
+/*   justify-content: center;
+/*   align-items: center;
+/*   gap: 12px;
+/*   padding: 18px;
+/*   font-size: 14px;
+/*   width: 100%;
+/* }
+/* 
+/* .footer a {
+/*   color: white;
+/*   text-decoration: none;
+/*   transition: color 0.2s ease;
+/* }
+/* 
+/* .footer a:hover {
+/*   color: #ffd400;
+/* }
+/* 
+
+/* ================= FOOTER (STICKY) ================= */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  background: #111;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px 18px;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+/* LINKS */
+.footer a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: #ffd400;
+}
+
+/* ================= INTRO HERO ================= */
+.intro-hero {
+  position: relative;
+  height: 650px;
+  background: url("../assets/images/intro-hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+}
+
+.intro-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 20, 50, 0.75) 0%,
+    rgba(0, 20, 50, 0.55) 40%,
+    rgba(0, 20, 50, 0.2) 70%,
+    rgba(0, 20, 50, 0) 100%
+  );
+}
+
+.intro-overlay {
+  position: relative;
+  max-width: 640px;
+  color: white;
+}
+
+.intro-overlay h1 {
+  font-size: clamp(36px, 4vw, 52px);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.intro-overlay p {
+  font-size: 20px;
+  opacity: 0.95;
+  margin-bottom: 28px;
+}
+
+.intro-actions {
+  display: flex;
+  gap: 16px;
+}
+
+/* SECTION SEPARATOR */
+.section-separator {
+  height: 80px;
+  background: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shipping-message {
+  font-size: 15px;
+  color: #333;
+  background: #f5f6f8;
+  padding: 10px 22px;
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.shipping-message strong {
+  color: var(--blue);
+}
+
+/* Botón secundario */
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 14px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: #000;
+}
+
+.top-bar.sub-header {
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,0.15);
+}
+
+/* ================= MARCAS ================= */
+.brands {
+  background: white;
+  padding: 90px 24px;
+  text-align: center;
+}
+
+.brands-header {
+  max-width: 720px;
+  margin: 0 auto 56px;
+}
+
+.brands-header h2 {
+  font-size: clamp(26px, 3vw, 34px);
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.brands-header p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* GRID DE LOGOS */
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 40px 48px;
+  align-items: center;
+  justify-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* CONTENEDOR VISUAL DEL LOGO */
+.brands-grid img {
+  max-width: 160px;
+  max-height: 70px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+
+  filter: grayscale(100%);
+  opacity: 0.75;
+  transition: 
+    filter 0.25s ease,
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* HOVER */
+.brands-grid img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.brands-hint {
+  display: inline-block;
+  margin-left: 6px;
+  color: var(--GRAY);
+  font-weight: 500;
+}
+
+/* ================= COTIZACIÓN RÁPIDA ================= */
+.quick-quote {
+  background: white;
+  padding: 80px 24px;
+}
+
+.quick-quote-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.quick-quote-header .eyebrow {
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.quote-icon {
+  margin: 24px auto 0;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(31, 63, 174, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-icon svg {
+  width: 34px;
+  height: 34px;
+  stroke: var(--blue);
+}
+
+/* FORM */
+.quick-quote-form {
+  max-width: 720px;
+  margin: 0 auto;
+  display: grid;
+  gap: 18px;
+}
+
+.quick-quote-form input,
+.quick-quote-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 14px;
+  border-radius: 12px;
+  border: 2px solid #000;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.quick-quote-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.quick-quote-form input:focus,
+.quick-quote-form textarea:focus {
+  border-color: var(--blue);
+}
+
+.file-input {
+  padding: 12px;
+  border: 2px dashed #ccc;
+  cursor: pointer;
+}
+
+/* ACTIONS */
+.quote-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}

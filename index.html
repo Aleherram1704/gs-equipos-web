@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>GS Equipos y Controles</title>
+  
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+  
+    <!-- HEADER -->
+    <header class="header">
+      <!-- LOGO -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/logo.png" alt="GS Equipos">
+        </a>
+      </div>
+    
+      <!-- SEARCH -->
+      <input 
+        type="search" 
+        placeholder="Buscar productos, categorías, marcas..." 
+        class="search"
+      />
+    
+      <!-- ACTIONS -->
+      <div class="header-icons">
+      
+        <!-- CUENTA -->
+        <div class="account">
+          <i data-feather="user"></i>
+          <span>Cuenta</span>
+        </div>
+      
+        <!-- WISHLIST -->
+        <div class="icon badge-icon">
+          <i data-feather="heart"></i>
+          <span class="badge-count" data-count="0">0</span>
+        </div>
+      
+        <!-- CARRITO -->
+        <div class="icon badge-icon cart">
+          <i data-feather="shopping-cart"></i>
+          <span class="badge-count" data-count="0">0</span>
+          <span class="total">$0.00</span>
+        </div>
+      
+      </div>
+    </header>
+  
+    <!-- BOTONES INICIO -->
+    <nav class="nav">
+      <a class="active">Inicio</a>
+      <a>Tienda</a>
+      <a>Acerca de</a>
+      <a>Contacto</a>
+    
+      <button class="btn-offers">Ofertas Especiales</button>
+    </nav>
+  
+     <!-- SUB HEADER -->
+    <div class="top-bar sub-header">
+      <div class="top-links">
+        <a href="#">Wishlist</a>
+        <a href="#">Seguimiento de pedidos</a>
+      </div>
+    </div>
+  
+    <!-- HERO DE ENTRADA -->
+    <section class="intro-hero">
+      <div class="intro-overlay">
+        <h1>
+          Desde la ingeniería<br>
+          hasta la integración:
+        </h1>
+        <p>
+          Desarrollamos proyectos completos de
+          automatización industrial.
+        </p>
+      
+        <div class="intro-actions">
+          <button class="btn-primary">Explorar soluciones</button>
+          <button class="btn-secondary">Conócenos</button>
+        </div>
+      </div>
+    </section>
+    
+    <div class="section-separator">
+      <span class="shipping-message">
+         Envío gratuito a partir de <strong>$5,000</strong>
+      </span>
+    </div>
+  
+    <!-- MAIN -->
+    <main class="layout">
+    
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <h3>Categorías</h3>
+        <ul>
+          <li>Cajas de Distribución</li>
+          <li>Cableado Industrial</li>
+          <li>Automatización</li>
+          <li>Iluminación Industrial</li>
+          <li>Protección Eléctrica</li>
+          <li>Instrumentación</li>
+          <li>Motores y Variadores</li>
+          <li>Herramientas</li>
+        </ul>
+      
+        <div class="help-box">
+          <p>¿Necesitas asesoría?</p>
+          <button>Contactar ahora</button>
+        </div>
+      </aside>
+    
+      <!-- HERO / SLIDER -->
+      <section class="hero slider">
+      
+        <div class="slides">
+        
+          <div class="slide active" style="background-image: url('assets/images/hero.jpg');">
+            <div class="slide-overlay">
+              <span class="badge">DESCUENTO DE FIN DE SEMANA</span>
+              <h1>Arranque de Motor y<br>Protecciones</h1>
+              <p>Obtén hasta un <strong>40%</strong> de descuento</p>
+              <button class="btn-primary">Tienda</button>
+            </div>
+          </div>
+        
+          <div class="slide" style="background-image: url('assets/images/hero.jpg');">
+            <div class="slide-overlay">
+              <span class="badge">NUEVA COLECCIÓN</span>
+              <h1>Soluciones<br>Industriales</h1>
+              <p>Distribuidores autorizados de las mejores marcas</p>
+              <button class="btn-primary">Ver catálogo</button>
+            </div>
+          </div>
+        
+          <div class="slide" style="background-image: url('assets/images/hero.jpg');">
+            <div class="slide-overlay">
+              <span class="badge">SOPORTE TÉCNICO</span>
+              <h1>Automatización<br>Eléctrica</h1>
+              <p>Asesoría especializada para proyectos exigentes</p>
+              <button class="btn-primary">Hablar con un asesor</button>
+            </div>
+          </div>
+        
+        </div>
+      
+        <!-- Flechas -->
+        <button class="slider-btn prev">‹</button>
+        <button class="slider-btn next">›</button>
+      
+        <!-- Dots -->
+        <div class="slider-dots"></div>
+      
+      </section>
+    
+    </main>
+  
+    <!-- MARCAS -->
+    <section class="brands">
+      <div class="brands-header">
+        <h2>NUESTRAS MARCAS</h2>
+        <p>
+          <span>Colaboramos con fabricantes líderes en la industria eléctrica y de automatización.<span>
+          <span class="brands-hint">Selecciona una marca para explorar sus soluciones.</span>
+        </p>
+      </div>
+    
+      <div class="brands-grid">
+        <a href="/tienda?marca=abb" class="brand-link">
+          <img src="assets/images/brands/ABB.png" alt="ABB">
+        </a>
+      
+        <a href="/tienda?marca=uline" class="brand-link">
+          <img src="assets/images/brands/Uline.png" alt="Uline">
+        </a>
+      
+        <a href="/tienda?marca=prysmian" class="brand-link">
+          <img src="assets/images/brands/prysmian.png" alt="Prysmian">
+        </a>
+      
+        <a href="/tienda?marca=argos" class="brand-link">
+          <img src="assets/images/brands/argos.png" alt="Argos">
+        </a>
+      
+        <a href="/tienda?marca=altech" class="brand-link">
+          <img src="assets/images/brands/altech.jpg" alt="Altech">
+        </a>
+      
+        <a href="/tienda?marca=circutor" class="brand-link">
+          <img src="assets/images/brands/crircuitor.png" alt="Circutor">
+        </a>
+      
+        <a href="/tienda?marca=abb-baldor" class="brand-link">
+          <img src="assets/images/brands/ABB-baldor.png" alt="ABB Baldor">
+        </a>
+      
+        <a href="/tienda?marca=carlo-gavazzi" class="brand-link">
+          <img src="assets/images/brands/Carlo_Gavazzi.png" alt="Carlo Gavazzi">
+        </a>
+      
+        <a href="/tienda?marca=elektrokabel" class="brand-link">
+          <img src="assets/images/brands/Elektrokabel.png" alt="Elektrokabel">
+        </a>
+      
+        <a href="/tienda?marca=veikong" class="brand-link">
+          <img src="assets/images/brands/veikong.png" alt="Veikong">
+        </a>
+      
+        <a href="/tienda?marca=weg" class="brand-link">
+          <img src="assets/images/brands/weg.png" alt="WEG">
+        </a>
+      
+        <a href="/tienda?marca=hitachi" class="brand-link">
+          <img src="assets/images/brands/Hitachi-Logo.png" alt="Hitachi">
+        </a>
+      </div>
+    </section>
+  
+     <!-- COTIZACIÓN RÁPIDA -->
+    <section class="quick-quote">
+      <div class="quick-quote-header">
+        <span class="eyebrow">COTIZACIÓN RÁPIDA</span>
+        <div class="quote-icon">
+          <i data-feather="shopping-bag"></i>
+        </div>
+      </div>
+    
+      <form class="quick-quote-form">
+        <input type="text" placeholder="Nombre" required>
+        <input type="text" placeholder="Empresa" required>
+        <input type="email" placeholder="Correo" required>
+        <input type="tel" placeholder="Teléfono">
+      
+        <textarea placeholder="Adjunta especificaciones técnicas o lista de materiales"></textarea>
+        <textarea placeholder="Describe lo que necesitas"></textarea>
+      
+        <div class="quote-actions">
+          <button type="submit" class="btn-primary">Enviar</button>
+        </div>
+      </form>
+    </section>
+  
+    <!-- FOOTER -->
+    <footer class="footer">
+      <a href="mailto:ventas@gsequiposycontroles.com.mx">ventas@gsequiposycontroles.com.mx</a>
+      <span>|</span>
+      <a href="tel:+522221863887">+52 222 186 3887</a>
+    </footer>
+  
+    <script>
+      feather.replace();
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
