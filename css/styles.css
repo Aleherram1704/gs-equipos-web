@@ -497,6 +497,14 @@ main {
   justify-content: center;
 }
 
+.section-separator-var2 {
+  height: 80px;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .shipping-message {
   font-size: 15px;
   color: #333;
