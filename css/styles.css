@@ -720,3 +720,37 @@ main {
   border-radius: 8px;
   cursor: pointer;
 }
+
+/* ===== UNDER CONSTRUCTION ===== */
+
+.page-under {
+  background: #f5f6f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.under-construction {
+  text-align: center;
+  background: white;
+  padding: 60px 40px;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  max-width: 520px;
+}
+
+.under-construction img {
+  width: 220px;
+  margin-bottom: 24px;
+}
+
+.under-construction h1 {
+  margin-bottom: 12px;
+}
+
+.under-construction p {
+  color: #666;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
