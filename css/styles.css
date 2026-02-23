@@ -167,11 +167,14 @@ body {
   padding: 6px 0;
   color: #333;
   transition: color 0.2s ease;
-  .nav a:visited,
-  .nav a:focus,
-  .nav a:active {
-    text-decoration: none; 
-    }
+
+  text-decoration: none; 
+}
+
+.nav a:visited,
+.nav a:focus,
+.nav a:active {
+  text-decoration: none;
 }
 
 .nav a::after {
